@@ -1,0 +1,16 @@
+extends layout/main-layout.pug
+
+block content
+    main
+            h1 Pokemon Collection
+            h2 Gonna catch 'em all!
+                .grid
+                    each pokemon in user
+                        article.card.product-item
+                            header.card__header
+                                h1.product__title #{pokemon.title}
+                            div.card__image
+                                img(src="https://vignette.wikia.nocookie.net/pokemon-fano/images/6/6f/Poke_Ball.png/revision/latest?cb=20140520015336" alt="Pokeball")
+                            .card__actions
+                                button.btnrel Release
+    
